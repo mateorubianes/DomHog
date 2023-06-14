@@ -1,0 +1,352 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    width: 100%;
+	height: 600px;
+    padding: 1em;
+}
+
+footer
+{
+    width:100%;
+    background-color: wheat;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    grid-area: "footer";
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover
+{
+    color:white;
+}
+
+tr
+{
+    align-items: center;
+}
+
+.items
+{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.Titulo /* TITULO DE LA PÁGINA */
+{
+    background-color: blue;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(32,75,170,1) 0%,
+    rgba(19,108,182,1) 0%, rgba(26,70,155,1) 6%, rgba(26,71,156,1) 12%, 
+    rgba(26,71,156,1) 18%, rgba(26,71,156,1) 24%, rgba(26,71,156,1) 30%);
+    color: white;
+    font-size: 2rem;
+    font-family: Helvetica, sans-serif;
+    padding: 1rem;
+    flex: 1;
+    width:100%;
+
+}
+
+strong
+{
+    font-size: 3rem;
+}
+
+/* - - - - FUENTES Y TAMAÑOS - - - - */
+.pPTA
+{
+    margin: 0px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    display: flex;
+}
+
+.pApp
+{
+    margin-bottom: 5px;
+    font-size: 20px;
+    display: flex;
+}
+
+.pNos
+{
+    margin-bottom: 20px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+/* - - - - FLEXBOX DE SENSADO Y TEMPERATURA - - - - */
+.DivPyT
+{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.ParSen
+{
+    flex-direction: row;
+    flex:1;
+    
+    padding-left: 1rem;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.TempProg
+{
+    flex-direction: row;
+    flex:1;
+
+    padding-left: 1rem;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+/* - - - - FLEXBOX DE LOS DISPOSITIVOS - - - - */
+.DivApp
+{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.Luz
+{
+    flex-direction: row;
+    flex:1;
+    
+    padding-left: 1rem;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 5px;
+}
+.Enchufe
+{
+    flex-direction: row;
+    flex:1;
+
+    padding-left: 1rem;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.Persiana
+{
+    flex-direction: row;
+    flex:1;
+
+    padding-left: 1rem;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+/* - - - - SLIDER LUZ DIMERIZABLE - - - - */
+.sliderdim {
+    -webkit-appearance: none;
+    width: 80%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .sliderdim:hover {
+    opacity: 1;
+  }
+  
+  .sliderdim::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: blue;
+    cursor: pointer;
+  }
+  
+  .sliderdim::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: blue;
+    cursor: pointer;
+  }
+
+  /* - - - - SLIDER BUTTON - - - - */
+  .switch {
+    position: relative; 
+    display: inline-block; 
+    width: 100px; 
+    height: 50px
+    } 
+  .switch input
+    {
+    display: none
+    }
+    .slider 
+    {
+    position: absolute; 
+    top: 0; left: 0; 
+    right: 0; bottom: 0; 
+    background-color: rgb(156, 156, 156); 
+    border-radius: 6px
+    }
+    .slider:before 
+    {
+    position: absolute; 
+    content: ""; 
+    height: 40px; 
+    width: 40px; 
+    left: 4px; 
+    bottom: 6px; 
+    background-color: #fff;
+    -webkit-transition: .4s; 
+    transition: .4s; 
+    border-radius: 4px
+    }
+    input:checked+.slider
+    {
+    background-color: blue
+    }
+    input:checked+.slider:before
+    {
+    -webkit-transform: translateX(52px); 
+    -ms-transform: translateX(52px); 
+    transform: translateX(52px)
+    }
+
+/* - - - - MEDIA QUERY - - - - */ 
+@media only screen and (max-width: 768px) 
+{
+    /*GRID PAGINA*/
+    .gridPYT_APPS
+    {
+        display:grid;
+        grid-template-areas:
+            "pyt"
+            "apps";
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+    }
+
+    .gridPYT
+    {
+        display:grid;
+        grid-template-areas:
+            "parS"
+            "tempP";
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+    }
+
+    .gridAPPS
+    {
+        display:grid;
+        grid-template-areas:
+            "luz"
+            "enc"
+            "per";
+        grid-template-columns: 1fr;
+        grid-row-gap: 30px;
+    }
+
+
+    .parS
+    {
+        grid-area: parS;
+    }
+
+    .tempP
+    {
+        grid-area: tempP;
+    }
+
+    .luz
+    {
+        grid-area: luz;
+    }
+
+    .enc
+    {
+        grid-area: enc;
+    }
+
+    .per
+    {
+        grid-area: per;
+    }
+}
+
+/* - - - - S3M - - - - */
+.fotos_modulos
+{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.UCP
+{
+    flex-direction: row;
+    flex: 1;
+    align-self: center;
+}
+
+.UCR
+{
+    flex-direction: row;
+    flex: 1;
+    align-self: center;
+}
+
+.GEN
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* - - - - CONTROL HORA - - - - */
+.btn
+{
+    background-color: blue;
+    color: white;
+}
+
+.btn:hover
+{
+    color: white;
+}

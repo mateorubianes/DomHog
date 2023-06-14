@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página orientada al control dom�tico del proyecto S3M">
+    <meta name="keywords" content="DOMóTICA, S3M, GRUPO 14">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/estilos.css">
+    <script src="../JS/script.js"></script>
+    <title>Empresa S3M</title>
+  </head>
+
+  <body>
+    <h1 class ="Titulo"><strong><a href="http://192.168.84.204">S3M</a></strong>&ensp;Nosotros</h1>
+      
+    <h2 class="DivApp">Sobre la compañía</h2>
+    <p class="pApp pNos">Somos el grupo 14 de sexto año 2022.<br>Este proyecto se llama DomHog y se basa en el control remoto de una casa por WIFI mediante el uso de una página web. 
+      Sus integrantes son Santiago Andrés Aguilar Vieito, Martín Ariel García, Máximo Poratti Iturzaeta y Mateo Joaquín Rubianes.
+    </p>
+    
+    <div class="GEN">
+      <img src="../FOTOS/diag_bloq_GENERAL.jpg" alt="diagrama en bloques del diseño general del proyecto">
+    </div>
+
+    <h2 class="DivApp">Página Web</h2>
+    <p class="pApp pNos">La forma principal de control y manejo de DomHog es mediante un sitio web desarrollado por nosotros en donde se muestra cada dispositivo conectado 
+      y su estado, además de poder ver los parametros sensados como lo son la temperatura y la presión atmosférica.
+    </p>
+    
+    <h2 class="DivApp">Módulos utilizados</h2>
+    <p class="pApp pNos">El proyecto cuenta con dos tipos de módulos principales, la UCP y la UCR. <br>
+      La UCP es la unidad de control de procesos, que es la parte central del proyecto y la que controla cualquier periférico que se pueda agregar. 
+      En esta se podrá ver la temperatura, presión atmosférica y además se puede acceder a cada UCR para ver o configurar su estado. <br>
+      Por otro lado estan las UCR, o unidades de control remoto. Estas son los periféricos que, en esta presentación son un enchufe controlado por temperatura, 
+      una luz dimmerizable con 10 valores posibles, una luz de encendido y apagado que se maneja tanto por la página web como por una ficha física, y una persiana controlable.
+    </p>
+
+    <div class="fotos_modulos">
+      <div class="UCP">
+        <img src="../FOTOS/diag_bloq_UCP.jpg" alt="diagrama en bloques de la UCP">
+      </div>
+      <div class="UCR">
+        <img src="../FOTOS/diag_bloq_UCR.jpg" alt="diagrama en bloques de las UCR">      
+      </div>
+    </div>
+    
+    <p class="pApp pNos">Aquí se muestra el diseño de la UCP que verá el usuario:</p>
+    <div class="GEN">
+      <img src="../FOTOS/diag_UCP.jpg" alt="diagrama en bloques del diseño general del proyecto">
+    </div>
+    <p class="pApp pNos">Los tres iconos con las letras L, E y P son botones para rápido acceso al menú de cada aplicación, luces, enchufe y persiana respectivamente. Al lado de estos 
+      se encuentra un encoder para poder navegar por el menú general y entrar a cualquier item que se desee o para configurar cada UCR individualmente desde su propio menú.
+    </p>
+
+    <h2 class="DivApp">Renders</h2>
+    <p class="pApp pNos">En esta sección se encuentran renders de los modulos UCP y UCR tanto de los enchufes, las luces y la persiana.</p>
+    
+  </body>
+  </html>

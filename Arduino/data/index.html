@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página orientada al control dom�tico del proyecto S3M">
+    <meta name="keywords" content="DOMóTICA, S3M, GRUPO 14">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/estilos.css">
+    <script src="./JS/script.js"></script>
+    <title>Domótica S3M</title>
+  </head>
+
+  <body onload="popup()">
+    <h1 class ="Titulo"><strong><a href="./S3M.html">S3M</a></strong>&ensp;Control Domótico</h1>
+    
+  <div class="gridPYT_APPS">
+    <div class ="DivPyT gridPYT">
+      <div class="ParSen parS">
+        <p class="pPTA">Parametros Sensados</p>
+        %TEMPSEN%
+        %PRESIONSEN%
+      </div>
+      <div class="TempProg tempP">
+        <p class="pPTA">Temperatura Programable</p>
+        %SLIDERTEMP%
+        %LABELTEMP%
+        <!--<p>Valor: <span id="Temp">15</span></p> -->
+      </div>
+    </div>
+    <div class ="DivApp gridAPPS">
+      <div class="Luz luz">
+        <p class="pPTA">Luces</p>
+          
+          <button type="button" class="btn pApp" id ="control" onclick="BotCon (this)">CONTROL MANUAL</button>
+          
+          <form>
+            <table>
+              <tr>
+                <td>
+                  <label for="inicio" class="pApp">Hora de Inicio:</label>
+                </td>
+                <td class="items">
+                  <input type="time" id="inicio" name="inicio" class="pApp" min="00:00" max="23:59" required>
+                </td>
+                <td class="items">
+                  <input type="submit" onclick="envio_ini()">
+                </td>
+              </tr>
+              </table>
+          </form>
+
+          <form>
+            <table>
+              <tr>
+                <td>
+                  <label for="inicio" class="pApp">Hora de Finalización:</label>
+                </td>
+                <td class="items">
+                  <input type="time" id="fin" name="fin" class="pApp" min="00:00" max="23:59" required>
+                </td>
+                <td class="items">
+                  <input type="submit" onclick="envio_fin()">
+                </td>
+              </tr>
+            </table>
+          </form>
+          
+          <p class="pApp">Luz Dimerizable</p> 
+          %SLIDERLUZDIM%
+          %LABELDIM%
+          <!--<p>Valor: <span id="LuzDim">0</span></p> -->
+          <p class="pApp">Luz Encendido/Apagado</p> 
+          %BUTTONLUZEA1%
+          
+      </div>
+      <div class="Enchufe enc">
+        <p class="pPTA">Enchufes</p>
+          <p class="pApp">Enchufe</p> 
+        %BUTTONENC1%
+      </div>
+      <div class="Persiana per">
+        <p class="pPTA">Persianas</p>
+          <p class="pApp">Persiana</p>
+          %SLIDERPER%
+          %LABELPER%
+          <!--<p>Posición: <span id="Per">BAJA</span></p> -->
+      </div>
+    </div>
+  </div>
+    
+    <footer>
+      <p align:center>Grupo 14     Proyecto S3M</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+  </body>
+</html>
